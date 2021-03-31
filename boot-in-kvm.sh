@@ -12,7 +12,7 @@ fi
 IMG=$1
 
 if [ "$2" == "" ]; then
-   OS="uc18"
+   OS="uc20"
 else
    OS=$2
 fi
