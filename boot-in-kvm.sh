@@ -25,7 +25,8 @@ else
  -net nic,model=virtio -net user,hostfwd=tcp::8022-:22 \
  -drive file=/usr/share/OVMF/OVMF_CODE.fd,if=pflash,format=raw,unit=0,readonly=on \
  -drive file=$IMG,cache=none,format=raw,id=disk1,if=none \
- -device virtio-blk-pci,drive=disk1,bootindex=1 -machine accel=kvm
+ -device virtio-blk-pci,drive=disk1,bootindex=1 -machine accel=kvm \
+ -nographic
    else
         echo $OS "is not a supported os"
    fi
